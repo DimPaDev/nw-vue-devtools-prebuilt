@@ -1,0 +1,12 @@
+{
+  "name": "nw-vue-devtools-prebuilt",
+  "version": "0.0.1",
+  "scripts": {
+    "postinstall" : "node install.js"
+  },
+  "main": "index.html",
+  "dependencies": {
+    "chrome-extension-downloader": "0.0.1",
+    "unzip-crx": "^0.2.0"
+  }
+}
