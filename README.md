@@ -4,7 +4,7 @@ Install prebuilt Vue DevTools extension to use in nw.js application
 ## Instructions
 
 1. `git clone https://github.com/DimPaDev/nw-vue-devtools-prebuilt.git`
-2. `cd nw-vue-devtools-prebuilt && npm install`
+2. `cd nw-vue-devtools-prebuilt && npm install && cd ..`
 
 3. Add this to your `package.json` of your nw.js app:
     ```js
