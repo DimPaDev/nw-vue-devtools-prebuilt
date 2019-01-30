@@ -1,11 +1,11 @@
 # nw-vue-devtools-prebuilt
-Install prebuilt Vue DevTools extension to use in nw.js application
+Install prebuilt Vue DevTools extension to use in a NW.js application
 
 ## Instructions
 
 1. `npm install nw-vue-devtools-prebuilt`
 
-2. Add this to your `package.json` of your nw.js app:
+2. Add this to your `package.json` of your NW.js app:
     ```js
       "chromium-args": "--load-extension='./node_modules/nw-vue-devtools-prebuilt/extension'"
     ```

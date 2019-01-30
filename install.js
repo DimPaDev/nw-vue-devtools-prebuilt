@@ -8,23 +8,23 @@ const manifestFile = path.join(__dirname, 'extension/manifest.json');
 const outDir = path.join(__dirname, 'extension');
 
 crxDownload(vuejsDevToolsId).then(buffer => {
-	console.log(' - Found Vue.js DevTools Crx Extension');
+	// console.log(' - Found Vue.js DevTools Crx Extension');
 	fs.writeFile(crx, buffer, err => {
 	  if (err) throw err;
-		console.log(' - Saved Crx File!');
+		// console.log(' - Saved Crx File!');
 		unzip(crx, outDir).then(() => {
-			console.log(" - Successfully unzipped the crx file..");
+			// console.log(" - Successfully unzipped the crx file..");
 			fs.unlinkSync(crx);
-			console.log(" - Reading Manifest file ...");
+			// console.log(" - Reading Manifest file ...");
 			fs.readFile(manifestFile, 'utf8', (err, data) => {
 				if (err) return console.log(err);
 				const toBeReplaced = `"file:///*",`;
 				const replacement = `"file:///*","*://*/*",`;
 				const result = data.replace(toBeReplaced, replacement);
-				console.log(" - Patching Vue DevTools manifest file...");
+				// console.log(" - Patching Vue DevTools manifest file...");
 				fs.writeFile(manifestFile, result, 'utf8', (err) => {
 					if (err) return console.log(err);
-					console.log('[OK] Done');
+					console.log('[OK] Vue DevTools Extension successfully installed!');
 				});
 			});
 		});

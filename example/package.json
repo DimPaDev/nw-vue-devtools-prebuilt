@@ -1,0 +1,5 @@
+{
+  "name": "helloworld-nw-vue-devtools",
+  "main": "index.html",
+  "chromium-args": "--load-extension='./node_modules/nw-vue-devtools-prebuilt/extension'"
+}
