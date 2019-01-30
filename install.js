@@ -4,8 +4,8 @@ const { crxDownload } = require('chrome-extension-downloader');
 const unzip = require("unzip-crx");
 const vuejsDevToolsId = 'nhdogjmejiglipccpnnnanhbledajbpd';
 const crx = path.join(__dirname, vuejsDevToolsId + '.crx');
-const manifestFile = path.join(__dirname, 'vue/manifest.json');
-const outDir = path.join(__dirname, 'vue');
+const manifestFile = path.join(__dirname, 'extension/manifest.json');
+const outDir = path.join(__dirname, 'extension');
 
 crxDownload(vuejsDevToolsId).then(buffer => {
 	console.log(' - Found Vue.js DevTools Crx Extension');
