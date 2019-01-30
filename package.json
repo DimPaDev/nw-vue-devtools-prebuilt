@@ -1,6 +1,7 @@
 {
   "name": "nw-vue-devtools-prebuilt",
   "version": "0.0.3",
+  "license": "MIT",
   "scripts": {
     "postinstall" : "node install.js"
   },
