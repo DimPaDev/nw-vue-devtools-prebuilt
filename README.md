@@ -7,7 +7,7 @@ Install prebuilt Vue DevTools extension to use in nw.js application
 
 2. Add this to your `package.json` of your nw.js app:
     ```js
-      "chromium-args": "--load-extension='./node_modules/nw-vue-devtools-prebuilt/vue'"
+      "chromium-args": "--load-extension='./node_modules/nw-vue-devtools-prebuilt/extension'"
     ```
 3. Vue.js must be in use in your app, and cannot be minified (`vue.js` not `vue.min.js`).
 
