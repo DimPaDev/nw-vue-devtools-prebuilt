@@ -2,7 +2,7 @@
   "name": "nw-vue-devtools-prebuilt",
   "description": "Add prebuilt (from Chrome Web Store) VueDevTools extension into NW.js",
   "author": "Dimitri Pandeleakis",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "scripts": {
     "postinstall" : "node install.js"
@@ -21,7 +21,7 @@
     "NW.js",
     "Developer Tools",
     "vue-devtools",
-    "vue-devtools-prebuild",
+    "vue-devtools-prebuilt",
     "desktop"
   ]
 }
