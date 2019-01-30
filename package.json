@@ -1,6 +1,6 @@
 {
   "name": "nw-vue-devtools-prebuilt",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "scripts": {
     "postinstall" : "node install.js"
@@ -9,5 +9,9 @@
   "dependencies": {
     "chrome-extension-downloader": "0.0.1",
     "unzip-crx": "^0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DimPaDev/nw-vue-devtools-prebuilt.git"
   }
 }
