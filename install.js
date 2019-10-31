@@ -16,15 +16,14 @@ downloadCRX.downloadById(vuejsDevToolsId, __dirname, vuejsDevToolsId).then(fileP
     // console.log(" - Reading Manifest file ...");
     fs.readFile(manifestFile, 'utf8', (err, data) => {
       if (err) return console.log(err);
-      const toBeReplaced = `"file:///*",`;
-      const replacement = `"file:///*","*://*/*",`;
-      const result = data.replace(toBeReplaced, replacement);
+      const result = data.replace(
+        `"file:///*",`, 
+        `"file:///*","<all_urls>",`
+      );
       // console.log(" - Patching Vue DevTools manifest file...");
       fs.writeFile(manifestFile, result, 'utf8', (err) => {
         if (err) return console.log(err);
-        if (fs.existsSync(pkgFile)) {
-            fs.unlinkSync(pkgFile);
-        }
+        if (fs.existsSync(pkgFile)) fs.unlinkSync(pkgFile);
         console.log('[OK] Vue DevTools Extension successfully installed!');
       });
     });
